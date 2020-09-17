@@ -12,14 +12,11 @@ public class Main {
         for (int i = 0; i < bingoSize; i++) {
             for (int j = 0; j < bingoSize; j++) {
                 int rangeMin = 1;
-                if (i == 1) {
-                    rangeMin = 16;
-                } else if (i == 2) {
-                    rangeMin = 31;
-                } else if (i == 3) {
-                    rangeMin = 46;
-                } else if (i == 4) {
-                    rangeMin = 61;
+                switch (i) {
+                    case (1) -> rangeMin = 16;
+                    case (2) -> rangeMin = 31;
+                    case (3) -> rangeMin = 46;
+                    case (4) -> rangeMin = 61;
                 }
                 int help;
                 do {
@@ -59,7 +56,6 @@ public class Main {
                 }
             }
             System.out.println();
-
         }
         System.out.println("--------------");
     }
